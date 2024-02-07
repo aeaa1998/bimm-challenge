@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03A760152B7312150032168A /* BIMMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A760142B7312150032168A /* BIMMApp.swift */; };
+		03A760172B7312150032168A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A760162B7312150032168A /* ContentView.swift */; };
+		03A760192B7312190032168A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03A760182B7312190032168A /* Assets.xcassets */; };
+		03A7601D2B7312190032168A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03A7601C2B7312190032168A /* Preview Assets.xcassets */; };
+		03A760272B73121A0032168A /* BIMMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A760262B73121A0032168A /* BIMMTests.swift */; };
+		03A760312B73121A0032168A /* BIMMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A760302B73121A0032168A /* BIMMUITests.swift */; };
+		03A760332B73121A0032168A /* BIMMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A760322B73121A0032168A /* BIMMUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03A760232B73121A0032168A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03A760092B7312150032168A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03A760102B7312150032168A;
+			remoteInfo = BIMM;
+		};
+		03A7602D2B73121A0032168A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03A760092B7312150032168A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03A760102B7312150032168A;
+			remoteInfo = BIMM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03A760112B7312150032168A /* BIMM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BIMM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03A760142B7312150032168A /* BIMMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIMMApp.swift; sourceTree = "<group>"; };
+		03A760162B7312150032168A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		03A760182B7312190032168A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		03A7601A2B7312190032168A /* BIMM.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BIMM.entitlements; sourceTree = "<group>"; };
+		03A7601C2B7312190032168A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		03A760222B73121A0032168A /* BIMMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BIMMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03A760262B73121A0032168A /* BIMMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIMMTests.swift; sourceTree = "<group>"; };
+		03A7602C2B73121A0032168A /* BIMMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BIMMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03A760302B73121A0032168A /* BIMMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIMMUITests.swift; sourceTree = "<group>"; };
+		03A760322B73121A0032168A /* BIMMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIMMUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03A7600E2B7312150032168A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03A7601F2B73121A0032168A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03A760292B73121A0032168A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03A760082B7312150032168A = {
+			isa = PBXGroup;
+			children = (
+				03A760132B7312150032168A /* BIMM */,
+				03A760252B73121A0032168A /* BIMMTests */,
+				03A7602F2B73121A0032168A /* BIMMUITests */,
+				03A760122B7312150032168A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		03A760122B7312150032168A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03A760112B7312150032168A /* BIMM.app */,
+				03A760222B73121A0032168A /* BIMMTests.xctest */,
+				03A7602C2B73121A0032168A /* BIMMUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		03A760132B7312150032168A /* BIMM */ = {
+			isa = PBXGroup;
+			children = (
+				03A760142B7312150032168A /* BIMMApp.swift */,
+				03A760162B7312150032168A /* ContentView.swift */,
+				03A760182B7312190032168A /* Assets.xcassets */,
+				03A7601A2B7312190032168A /* BIMM.entitlements */,
+				03A7601B2B7312190032168A /* Preview Content */,
+			);
+			path = BIMM;
+			sourceTree = "<group>";
+		};
+		03A7601B2B7312190032168A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				03A7601C2B7312190032168A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		03A760252B73121A0032168A /* BIMMTests */ = {
+			isa = PBXGroup;
+			children = (
+				03A760262B73121A0032168A /* BIMMTests.swift */,
+			);
+			path = BIMMTests;
+			sourceTree = "<group>";
+		};
+		03A7602F2B73121A0032168A /* BIMMUITests */ = {
+			isa = PBXGroup;
+			children = (
+				03A760302B73121A0032168A /* BIMMUITests.swift */,
+				03A760322B73121A0032168A /* BIMMUITestsLaunchTests.swift */,
+			);
+			path = BIMMUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		03A760102B7312150032168A /* BIMM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03A760362B73121A0032168A /* Build configuration list for PBXNativeTarget "BIMM" */;
+			buildPhases = (
+				03A7600D2B7312150032168A /* Sources */,
+				03A7600E2B7312150032168A /* Frameworks */,
+				03A7600F2B7312150032168A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BIMM;
+			productName = BIMM;
+			productReference = 03A760112B7312150032168A /* BIMM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		03A760212B73121A0032168A /* BIMMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03A760392B73121A0032168A /* Build configuration list for PBXNativeTarget "BIMMTests" */;
+			buildPhases = (
+				03A7601E2B73121A0032168A /* Sources */,
+				03A7601F2B73121A0032168A /* Frameworks */,
+				03A760202B73121A0032168A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03A760242B73121A0032168A /* PBXTargetDependency */,
+			);
+			name = BIMMTests;
+			productName = BIMMTests;
+			productReference = 03A760222B73121A0032168A /* BIMMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		03A7602B2B73121A0032168A /* BIMMUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03A7603C2B73121A0032168A /* Build configuration list for PBXNativeTarget "BIMMUITests" */;
+			buildPhases = (
+				03A760282B73121A0032168A /* Sources */,
+				03A760292B73121A0032168A /* Frameworks */,
+				03A7602A2B73121A0032168A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03A7602E2B73121A0032168A /* PBXTargetDependency */,
+			);
+			name = BIMMUITests;
+			productName = BIMMUITests;
+			productReference = 03A7602C2B73121A0032168A /* BIMMUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03A760092B7312150032168A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					03A760102B7312150032168A = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					03A760212B73121A0032168A = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 03A760102B7312150032168A;
+					};
+					03A7602B2B73121A0032168A = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 03A760102B7312150032168A;
+					};
+				};
+			};
+			buildConfigurationList = 03A7600C2B7312150032168A /* Build configuration list for PBXProject "BIMM" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 03A760082B7312150032168A;
+			productRefGroup = 03A760122B7312150032168A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				03A760102B7312150032168A /* BIMM */,
+				03A760212B73121A0032168A /* BIMMTests */,
+				03A7602B2B73121A0032168A /* BIMMUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03A7600F2B7312150032168A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03A7601D2B7312190032168A /* Preview Assets.xcassets in Resources */,
+				03A760192B7312190032168A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03A760202B73121A0032168A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03A7602A2B73121A0032168A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03A7600D2B7312150032168A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03A760172B7312150032168A /* ContentView.swift in Sources */,
+				03A760152B7312150032168A /* BIMMApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03A7601E2B73121A0032168A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03A760272B73121A0032168A /* BIMMTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03A760282B73121A0032168A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03A760312B73121A0032168A /* BIMMUITests.swift in Sources */,
+				03A760332B73121A0032168A /* BIMMUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03A760242B73121A0032168A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03A760102B7312150032168A /* BIMM */;
+			targetProxy = 03A760232B73121A0032168A /* PBXContainerItemProxy */;
+		};
+		03A7602E2B73121A0032168A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03A760102B7312150032168A /* BIMM */;
+			targetProxy = 03A7602D2B73121A0032168A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		03A760342B73121A0032168A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		03A760352B73121A0032168A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		03A760372B73121A0032168A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BIMM/BIMM.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BIMM/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.interview.caas.BIMM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		03A760382B73121A0032168A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BIMM/BIMM.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BIMM/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.interview.caas.BIMM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		03A7603A2B73121A0032168A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.interview.caas.BIMMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BIMM.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BIMM";
+			};
+			name = Debug;
+		};
+		03A7603B2B73121A0032168A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.interview.caas.BIMMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BIMM.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BIMM";
+			};
+			name = Release;
+		};
+		03A7603D2B73121A0032168A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.interview.caas.BIMMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BIMM;
+			};
+			name = Debug;
+		};
+		03A7603E2B73121A0032168A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.interview.caas.BIMMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BIMM;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03A7600C2B7312150032168A /* Build configuration list for PBXProject "BIMM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03A760342B73121A0032168A /* Debug */,
+				03A760352B73121A0032168A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03A760362B73121A0032168A /* Build configuration list for PBXNativeTarget "BIMM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03A760372B73121A0032168A /* Debug */,
+				03A760382B73121A0032168A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03A760392B73121A0032168A /* Build configuration list for PBXNativeTarget "BIMMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03A7603A2B73121A0032168A /* Debug */,
+				03A7603B2B73121A0032168A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03A7603C2B73121A0032168A /* Build configuration list for PBXNativeTarget "BIMMUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03A7603D2B73121A0032168A /* Debug */,
+				03A7603E2B73121A0032168A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 03A760092B7312150032168A /* Project object */;
+}
