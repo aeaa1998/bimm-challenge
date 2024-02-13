@@ -1155,8 +1155,8 @@
             filePath = "BIMM/Presentation/Modules/Home/View/CatHomeView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -1204,54 +1204,6 @@
                   startingLineNumber = "118"
                   endingLineNumber = "118"
                   offsetFromSymbolStart = "136">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EE713616-BDE9-4C04-AE34-0DD0F63F8EAA"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BIMM/Presentation/Modules/Home/View/CatHomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "EE713616-BDE9-4C04-AE34-0DD0F63F8EAA - e92a3ba105237b8a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;BIMM.LoadingCatView, SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of BIMM.CatHomeView.Content.emptyView : some&gt;&gt;.0, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, BIMM.SadCatErrorView, SwiftUI.Spacer)&gt;&gt;&gt; in BIMM.CatHomeView.Content.body.getter : some"
-                  moduleName = "BIMM"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/augustoalonso/ios/BIMM/BIMM/Presentation/Modules/Home/View/CatHomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "1580">
-               </Location>
-               <Location
-                  uuid = "EE713616-BDE9-4C04-AE34-0DD0F63F8EAA - 9537d94bdcea13da"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;BIMM.LoadingCatView, SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of BIMM.CatHomeView.Content.emptyView : some&gt;&gt;.0, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Spacer, BIMM.SadCatErrorView, SwiftUI.Spacer)&gt;&gt;&gt; in BIMM.CatHomeView.Content.body.getter : some"
-                  moduleName = "BIMM"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/augustoalonso/ios/BIMM/BIMM/Presentation/Modules/Home/View/CatHomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "368">
                </Location>
             </Locations>
          </BreakpointContent>

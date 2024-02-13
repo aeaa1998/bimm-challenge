@@ -93,7 +93,7 @@ struct CatHomeView: View {
         }
         
         var body: some View {
-            Group {
+            ScrollView { 
                 switch requestState {
                 case .loading, .none:
                     LoadingCatView()
@@ -101,18 +101,16 @@ struct CatHomeView: View {
                     if catsFiltered.isEmpty {
                         emptyView
                     }else {
-                        ScrollView {
-                            LazyVStack {
-                                ForEach(catsFiltered) { cat in
-                                    CatCardView(cat: cat, filterTags: filterTags)
-                                        .accessibilityHint("Double tap to Navigate \(cat.id) detail")
-                                        .onTapGesture {
-                                            onCatSelected(cat)
-                                        }
-                                }
+                        LazyVStack {
+                            ForEach(catsFiltered) { cat in
+                                CatCardView(cat: cat, filterTags: filterTags)
+                                    .accessibilityHint("Double tap to Navigate \(cat.id) detail")
+                                    .onTapGesture {
+                                        onCatSelected(cat)
+                                    }
                             }
-                            .padding(.horizontal)
                         }
+                        .padding(.horizontal)
                     }
                 case .error(let error):
                     VStack {
