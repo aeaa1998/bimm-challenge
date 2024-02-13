@@ -7,12 +7,29 @@
 
 import SwiftUI
 
-struct View_Utils: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+func getWindow() -> UIWindow? {
+    return UIApplication.shared.connectedScenes
+
+        .filter({$0.activationState == .foregroundActive})
+
+        .map({$0 as? UIWindowScene})
+
+        .compactMap({$0})
+
+        .first?.windows
+
+        .filter({$0.isKeyWindow}).first
 }
 
-#Preview {
-    View_Utils()
+func getSafeAreaTop() -> CGFloat? {
+
+    let keyWindow = getWindow()
+
+    return (keyWindow?.safeAreaInsets.top)
+
+}
+
+func hideKeyboard() {
+    getWindow()?.endEditing(true)
+
 }

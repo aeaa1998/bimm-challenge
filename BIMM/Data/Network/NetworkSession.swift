@@ -1,17 +1,18 @@
 //
-//  NetworkingSession.swift
+//  NetworkSession.swift
 //  BIMM
 //
-//  Created by Augusto Alonso on 6/02/24.
+//  Created by Augusto Alonso on 8/02/24.
 //
 
 import Foundation
 import Alamofire
 
-struct NetworkingSession {
+struct NetworkSession {
     //The default implementation of a session
     static let `default`: Session = {
-        let timeout: TimeInterval = 100
+        //15 seconds is the timeout for the api call
+        let timeout: TimeInterval = 15
         let configuration = URLSessionConfiguration.af.default
         configuration.timeoutIntervalForRequest = timeout
         

@@ -1,5 +1,404 @@
 {
   "sourceLanguage" : "en",
-  "strings" : {},
+  "strings" : {
+    " (%@)" : {
+
+    },
+    " %@" : {
+
+    },
+    "Cat card view" : {
+
+    },
+    "cat_belongs_to" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This cat belongs to:"
+          }
+        }
+      }
+    },
+    "cat_has_no_owner" : {
+      "comment" : "The cat has no owner set",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No owner"
+          }
+        }
+      }
+    },
+    "cat_home_title" : {
+      "comment" : "Title of home view of the cats",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Funny Cats"
+          }
+        }
+      }
+    },
+    "cat_image" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cat image"
+          }
+        }
+      }
+    },
+    "cat_image_error" : {
+      "comment" : "This text describes when the image of the cat was corrupt or just failed to load",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cat image not loaded 😿"
+          }
+        }
+      }
+    },
+    "cat_image_with_text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cat image with text"
+          }
+        }
+      }
+    },
+    "cat_loading_error" : {
+      "comment" : "Error occurred while loading the cats",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An unexpected error occurred while loading the cats! 🙀"
+          }
+        }
+      }
+    },
+    "cat_no_tags" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This cat has no tags associated"
+          }
+        }
+      }
+    },
+    "cat_talk_instructions" : {
+      "comment" : "Instructions to describe how to make an image of a cat talking.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter the phrase you want the cat to talk and press the button \"✔️\" to watch the image of the cat talking"
+          }
+        }
+      }
+    },
+    "cat_talk_placeholder" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter the phrase to talk"
+          }
+        }
+      }
+    },
+    "created_at" : {
+      "comment" : "Created at text",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Created at"
+          }
+        }
+      }
+    },
+    "detail_for" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detail for"
+          }
+        }
+      }
+    },
+    "detault_loading_message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading information ...."
+          }
+        }
+      }
+    },
+    "done" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
+        }
+      }
+    },
+    "Double tap to Navigate %@ detail" : {
+
+    },
+    "filter_button_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "select filter for tag"
+          }
+        }
+      }
+    },
+    "filters" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filters"
+          }
+        }
+      }
+    },
+    "go" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Go"
+          }
+        }
+      }
+    },
+    "hide_cat_talking" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hide cat talking"
+          }
+        }
+      }
+    },
+    "information" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Information"
+          }
+        }
+      }
+    },
+    "mime_type" : {
+      "comment" : "The mime type of the image",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MimeType"
+          }
+        }
+      }
+    },
+    "no_cats_found" : {
+      "comment" : "No cats are found to display in the view",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No cats where found with the desired requirements. 🐈"
+          }
+        }
+      }
+    },
+    "no_results" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There are no results available with the selected filters"
+          }
+        }
+      }
+    },
+    "owner" : {
+      "comment" : "Owner",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Owner"
+          }
+        }
+      }
+    },
+    "reset" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset"
+          }
+        }
+      }
+    },
+    "retry" : {
+      "comment" : "Verb of trying again",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retry"
+          }
+        }
+      }
+    },
+    "search_tags_placeholder" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type here to search tags by name"
+          }
+        }
+      }
+    },
+    "see_all" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See all"
+          }
+        }
+      }
+    },
+    "see_less" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See less"
+          }
+        }
+      }
+    },
+    "show_cat_talking" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show cat talking"
+          }
+        }
+      }
+    },
+    "show_filters" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show filters"
+          }
+        }
+      }
+    },
+    "tags" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tags"
+          }
+        }
+      }
+    },
+    "talk" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Talk"
+          }
+        }
+      }
+    },
+    "talking to the moon" : {
+
+    },
+    "Touch me" : {
+
+    },
+    "unfilter_button_description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "deselect filter for tag"
+          }
+        }
+      }
+    },
+    "updated_at" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Updated at"
+          }
+        }
+      }
+    }
+  },
   "version" : "1.0"
 }

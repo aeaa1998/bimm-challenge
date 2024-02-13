@@ -27,7 +27,7 @@ struct ChipView<Content: View>: View {
     }
     
     enum Size {
-        case small, medium, large
+        case small, medium, large, custom(x: CGFloat, y: CGFloat)
         
         fileprivate var horizontalPadding: CGFloat {
             switch self {
@@ -37,6 +37,8 @@ struct ChipView<Content: View>: View {
                 return 10
             case .large:
                 return 14
+            case .custom(x: let x, y: _):
+                return x
             }
         }
         
@@ -48,6 +50,8 @@ struct ChipView<Content: View>: View {
                 return 8
             case .large:
                 return 12
+            case .custom(x: _, y: let y):
+                return y
             }
         }
     }
@@ -63,5 +67,5 @@ extension ChipView where Content == Text {
 
 #Preview {
     ChipView("text")
-        .background(Color.appPrimary)
+        .background(BIMMTheme.default.palette.primary)
 }

@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+enum DetailTab : String, CaseIterable, Identifiable {
+    case information, talk
+    
+    var id: String {
+        self.rawValue
+    }
+}

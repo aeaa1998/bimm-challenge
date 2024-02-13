@@ -61,27 +61,6 @@ struct CatImageView: View {
     }
     
     var body: some View {
-        basic
-//        if let url {
-//            if phase == .failed {
-//                errorView
-//            }else{
-//                ZStack(alignment: .center) {
-//                    GifView(url: url, phase: $phase)
-//                    if phase == .loading {
-//                        ProgressView()
-//                    }
-//                }
-//                
-//            }
-//        }else{
-//            errorView
-//        }
-    }
-    
-    
-    @ViewBuilder
-    var basic: some View {
         if let url {
             if cached {
                 CachedAsyncImage(url: url, urlCache: URL.imageCache) { phase in
@@ -98,14 +77,14 @@ struct CatImageView: View {
             errorView
         }
     }
-    
-    
+
     @ViewBuilder
     private func ImagePhaseView(_ phase: AsyncImagePhase) -> some View {
         switch phase {
         case .success(let image):
             image
                 .resizable()
+                .accessibilityLabel(imageAccessibilityLabel)
                 
         case .failure(_):
             errorView
@@ -116,14 +95,23 @@ struct CatImageView: View {
         }
     }
     
+    private var imageAccessibilityLabel : Text {
+        if let talk {
+          return Text("cat_image_with_text".localized()) + Text(" \(talk)")
+        } else{
+          return Text("cat_image".localized())
+        }
+    }
+    
     private var errorView: some View {
         Text("cat_image_error")
             .font(.body)
             .multilineTextAlignment(.center)
+            .frame(maxWidth: .infinity)
     }
 }
 
 #Preview {
     CatImageView(cat: Cat(id: "rV1MVEh0Af2Bm4O0", tags: [], owner: nil), queryParameters: ["height": "175", "width": "175"])
-        .background(Color.appSecondary)
+        .background(BIMMTheme.default.palette.secondary)
 }

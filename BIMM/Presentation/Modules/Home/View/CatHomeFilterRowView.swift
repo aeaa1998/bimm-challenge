@@ -8,11 +8,44 @@
 import SwiftUI
 
 struct CatHomeFilterRowView: View {
+    @Environment(\.theme) var theme
+    @Environment(\.colorScheme) var colorScheme
+    let tag: String
+    let selected: Bool
+    
+    private var chipColor: Color {
+        colorScheme == .dark ? theme.palette.secondary : theme.palette.primary
+    }
+    
+    private var shape: RoundedRectangle {
+        theme.shapes.small
+    }
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            Text(tag)
+                
+            Spacer()
+            
+            if selected {
+                Image(systemName: "checkmark")
+            }
+        }
+            .padding(.horizontal)
+            .padding(.vertical, 8)
+            .font(.body.weight( selected ? .bold : .light))
+            .background(selected ? chipColor : .clear)
+            .foregroundStyle(selected ? .white : .primary)
+            .animation(.linear, value: selected)
+            .clipShape(shape)
+            .contentShape(shape)
     }
 }
 
-#Preview {
-    CatHomeFilterRowView()
+#Preview("Both options") {
+    VStack {
+        CatHomeFilterRowView(tag: "Tag", selected: false)
+        CatHomeFilterRowView(tag: "Tag", selected: true)
+    }
 }

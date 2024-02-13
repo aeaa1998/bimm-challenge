@@ -8,11 +8,28 @@
 import SwiftUI
 
 struct UnderlineTextFieldView: View {
+    @Environment(\.theme) var theme
+    let placeholder: LocalizedStringKey
+    @Binding var text: String
+    
+    init(_ placeholder: LocalizedStringKey, text: Binding<String>) {
+        self.placeholder = placeholder
+        self._text = text
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 6) {
+            TextField("cat_talk_placeholder", text: $text)
+                .foregroundStyle(.primary)
+            
+            Spacer()
+                .frame(height: 3)
+                .frame(maxWidth: .infinity)
+                .background(theme.palette.primary)
+        }
     }
 }
 
 #Preview {
-    UnderlineTextFieldView()
+    UnderlineTextFieldView("cat_talk_placeholder", text: .constant(""))
 }

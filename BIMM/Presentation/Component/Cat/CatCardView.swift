@@ -2,135 +2,135 @@
 //  CatCardView.swift
 //  BIMM
 //
-//  Created by Augusto Alonso on 7/02/24.
+//  Created by Augusto Alonso on 8/02/24.
 //
 
 import SwiftUI
 
 struct CatCardView: View {
+    @Environment(\.theme) var theme
     let cat: Cat
-    
+    //Tags to sort to show when we filter
+    let filterTags: [String]
+    private let size: CGFloat = 100
     //We will just use the first 4 tags
     private var visibleTags: [String] {
         Array(
             cat.tags
-            //We will filter them so long tags are not shown
-                .filter { $0.count < 7 }
-                .prefix(5)
+            //First filter in alpha order
+                .sorted()
+                .sorted { lhs, _ in
+                    filterTags.contains(lhs)
+                }
+            //Show 10 as a maximum
+                .prefix(10)
         )
     }
     
+    init(cat: Cat, filterTags: [String] = []) {
+        self.cat = cat
+        self.filterTags = filterTags
+    }
+    
     var body: some View {
-        VStack(spacing: 0) {
-            CatImageView(cat: cat)
-            .frame(height: 150)
+        HStack(alignment: .top, spacing: 12) {
+            CatImageView(
+                cat: cat,
+                cached: true,
+                queryParameters: ["height": "\(size)", "width": "\(size)"]
+            )
+            .frame(width: size, height: size)
+            .background(theme.palette.secondary)
+            .clipShape(theme.shapes.regular)
             
-
-            VStack(alignment: .leading, spacing: 4) {
-                VStack(alignment: .leading) {
-                    Text("cat_belongs_to")
-                        .font(.caption)
-                    Group {
-                        if let owner = cat.owner {
-                            Text(owner)
-                        }else {
-                            Text("cat_has_no_owner")
-                                .fixedSize(horizontal: false, vertical: true)
-                        }
+            VStack(alignment: .leading) {
+                Text(cat.id)
+                    .font(.headline)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
+                Group {
+                    if let owner = cat.owner {
+                        Text(owner)
+                    }else{
+                        Text("cat_has_no_owner")
                     }
                 }
+                .font(.body)
                 
-                .frame(maxWidth: .infinity, alignment: .leading)
-
-                if visibleTags.count > 0 {
-                    tagsView
+                VStack(alignment: .leading, spacing: 4) {
+                    if visibleTags.count > 0 {
+                        tagsView
+                    }else{
+                        Text("cat_no_tags")
+                            .font(.caption)
+                    }
+                    //Fill the remaining space
+                    Spacer()
                 }
-                //Fill the remaining space
-                Spacer()
             }
-            .frame(height: 100)
-            .padding(12)
+            .padding(.vertical)
         }
-        .frame(height: 250)
-        .background(.regularMaterial)
-        .clipShape(RoundedRectangle(cornerRadius: 20))
+        .background(theme.palette.primary.opacity(0.15).accessibilityLabel("Cat card view"))
+        .background(.ultraThickMaterial)
+        .clipShape(theme.shapes.regular)
+        .contentShape(theme.shapes.regular)
         
     }
     
     private var tagsView: some View {
         FlowLayoutView(items: visibleTags) { tag in
             ChipView(tag)
-                .background(Color.appPrimary)
-                .font(.system(size: 12).bold())
+                .background(filterTags.contains(tag) ? theme.palette.primary : theme.palette.primary.opacity(0.4))
+                .font(.footnote.bold())
                 .foregroundStyle(.white)
-                .clipShape(RoundedRectangle(cornerRadius: 20))
-                
+                .clipShape(theme.shapes.regular)
+                .overlay(theme.shapes.regular.stroke(theme.palette.primary, lineWidth: 2))
+                .padding(2)
+            
         }
     }
     
-
+    
 }
 
 #Preview {
-    VStack {
-        HStack {
-            GeometryReader { proxy in
+    ScrollView {
+        VStack {
+            VStack {
                 CatCardView(
-                    cat: .init(id: "test", tags: ["Tag", "Tag2", "Tag 3", "Tag 4", "Tag 5a"], owner: "a", createdAt: Date(), updatedAt: Date())
+                    cat: .init(id: "rV1MVEh0Af2Bm4O0", tags: ["Tag", "Tag2", "Tag 3", "Tag 4", "Tag 5a"], owner: "a")
                 )
-                .frame(width: proxy.size.width)
-                .clipped()
-            }
-            
-            GeometryReader { proxy in
+                
                 CatCardView(
                     cat: .init(
                         id: "iaQ7TgfKYQXIubuW",
                         tags: ["Tag", "Tag2", "Tag 3", "Tag 4", "Tag 5a"],
-                        owner: nil,
-                        createdAt: Date(),
-                        updatedAt: Date()
+                        owner: nil
                     )
                 )
-                .frame(width: proxy.size.width)
-                .clipped()
-            }
-        }
-        
-        HStack {
-            GeometryReader { proxy in
-                CatCardView(
-                    cat: .init(id: "test", tags: ["Tag", "Tag2", "Tag 3", "Tag 4", "Tag 5a"], owner: "a", createdAt: Date(), updatedAt: Date())
-                )
-                .frame(width: proxy.size.width)
-                .clipped()
+                
             }
             
-            GeometryReader { proxy in
-                CatCardView(
-                    cat: .init(
-                        id: "test",
-                        tags: ["Tag", "Tag2", "Tag 3", "Tag 4", "Tag 5a"],
-                        owner: nil,
-                        createdAt: Date(),
-                        updatedAt: Date()
-                    )
+            CatCardView(
+                cat: .init(id: "test", tags: ["Tag", "Tag2", "Tag 3", "Tag 4", "Tag 5a"], owner: "a"),
+                filterTags: ["Tag"]
+            )
+            
+            CatCardView(
+                cat: .init(
+                    id: "test",
+                    tags: [],
+                    owner: nil
                 )
-                .frame(width: proxy.size.width)
-                .clipped()
-            }
+            )
         }
-        
         Spacer()
     }
     .padding()
-    .background(
-        Color.appSecondary,
-        ignoresSafeAreaEdges: .all
-    )
-    .colorScheme(.light)
-
+    .background(Color.systemBackground)
 }
+
+
 
 
 

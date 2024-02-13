@@ -2,7 +2,7 @@
 //  Api.swift
 //  BIMM
 //
-//  Created by Augusto Alonso on 6/02/24.
+//  Created by Augusto Alonso on 8/02/24.
 //
 
 import Foundation
@@ -27,17 +27,17 @@ protocol Api : URLRequestConvertible {
     /// Base URL for the API call.
     var baseUrl: String { get }
     
-    
-    /// Normalizes the URL for the API call.
-    ///
-    /// - Parameter path: Path for the API call.
-    /// - Returns: Normalized URL.
-    func normalizeUrl(path: String) -> String
 }
 
 //Default implementations for some attributes
 extension Api {
+    var baseUrl: String {
+        BIMMEnvironment.baseURL.value
+    }
     
+    var parameters: JSON? {
+        nil
+    }
 }
 
 //Default behaviour to create a request from this body

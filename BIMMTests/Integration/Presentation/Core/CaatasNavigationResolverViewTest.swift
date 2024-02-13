@@ -10,7 +10,7 @@ import ViewInspector
 import SwiftUI
 @testable import BIMM
 
-final class CaatasNavigationResolverView : XCTestCase {
+final class CaatasNavigationResolverViewTest : XCTestCase {
     func test_homeViewPath() throws {
         //Arrange
         let view = CaatasNavigationResolverView(destination: .home)

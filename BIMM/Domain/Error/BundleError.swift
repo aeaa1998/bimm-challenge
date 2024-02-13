@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+
+enum BundleError : Error {
+    case bundleNotFound, resourceNotFound
+}

@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+
+protocol CatServiceProtocol {
+    func getCats() async -> RequestResponse<[Cat]>
+    func getTags() async -> RequestResponse<[String]>
+    func getCat(for cat: Cat) async -> RequestResponse<CatDetail>
+}

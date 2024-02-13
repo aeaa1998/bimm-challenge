@@ -8,12 +8,12 @@
 import XCTest
 
 final class BIMMUITestNavigation: XCTestCase {
-
+    var bundle: Bundle?
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
+        bundle = Bundle(for: BIMMUITestNavigation.self)
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
@@ -22,13 +22,26 @@ final class BIMMUITestNavigation: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func test_navigationToDetail() throws {
+        // Arrange
         let app = XCUIApplication()
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        //In this scenario we can use the id because the data comes from the json file
+        let catIdLabel = app.staticTexts["xkO0UNOv5HgUjmdm"]
+        XCTAssert(catIdLabel.waitForExistence(timeout: 8))
         
+        
+        //Act
+        catIdLabel.tap()
+        
+        //Assert
+        let homeViewTitleNavigation = app.navigationBars[String(localized: "cat_home_title")]
+        XCTAssertFalse(homeViewTitleNavigation.exists)
+        
+        let predicate = NSPredicate(format: "label CONTAINS[c] %@", String(localized: "detail_for", bundle: bundle))
+        let detailTitle = app.staticTexts.containing(predicate)
+        //Asert we are in the detail view
+        XCTAssert(detailTitle.element.waitForExistence(timeout: 8))
     }
 
 

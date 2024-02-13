@@ -8,11 +8,26 @@
 import SwiftUI
 
 protocol Theme {
-    let palette: ColorPalette
-    
-    struct ColorPalette {
-        let primary: Color
-        let secondary: Color
-    }
-    
+    var palette: ColorPalette { get }
+    var shapes: ShapeCatalog { get }
+    var backgrounds: BackgoundCatalog { get }
 }
+
+struct ColorPalette {
+    let primary: Color
+    let secondary: Color
+}
+
+struct ShapeCatalog {
+    let small: RoundedRectangle
+    let regular: RoundedRectangle
+    let large: RoundedRectangle
+}
+
+struct BackgoundCatalog {
+    //The main background used for normal screens like home
+    let background: Color
+    // Backgrounds used in sheet content
+    let sheet: Color
+}
+

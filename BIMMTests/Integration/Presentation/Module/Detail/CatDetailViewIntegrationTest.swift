@@ -30,7 +30,7 @@ final class CatDetailViewIntegrationTest: XCTestCase {
         let view = CatDetailView.Content(id: cat.id, cat: cat, requestState: .success, selected: .init(get: { DetailTab.information }, set: { _ in }))
         
         //Assert
-        _ = try XCTUnwrap(view.inspect().find(text: cat.id))
+        _ = try XCTUnwrap(view.inspect().find(text: getTextId(cat.id)))
         _ = try XCTUnwrap(view.inspect().find(text: cat.owner!))
         
         //Information View is shown
@@ -52,7 +52,7 @@ final class CatDetailViewIntegrationTest: XCTestCase {
         let view = CatDetailView.Content(id: "test", cat: nil, requestState: .error("failed"), selected: .init(get: { DetailTab.information }, set: { _ in }))
         
         //Assert
-        _ = try XCTUnwrap(view.inspect().find(text: "test"))
+        _ = try XCTUnwrap(view.inspect().find(text: getTextId("test")))
 
         //Error view is shown
         _ = try XCTUnwrap(view.inspect().find(SadCatErrorView.self))
@@ -69,7 +69,7 @@ final class CatDetailViewIntegrationTest: XCTestCase {
         let view = CatDetailView.Content(id: "test", cat: nil, requestState: .loading, selected: .init(get: { DetailTab.information }, set: { _ in }))
         
         //Assert
-        _ = try XCTUnwrap(view.inspect().find(text: "test"))
+        _ = try XCTUnwrap(view.inspect().find(text: getTextId("test")))
 
         //Loading view is shown
         _ = try XCTUnwrap(view.inspect().find(ViewType.ProgressView.self))
@@ -143,5 +143,10 @@ final class CatDetailViewIntegrationTest: XCTestCase {
         //Assert
         XCTAssertNil(try? view.inspect().find(CatDetailInformationView.self))
         _ = try XCTUnwrap(try view.inspect().find(CatDetailTalkView.self))
+    }
+    
+    
+    private func getTextId(_ id: String) -> String{
+        return String(localized: "detail_for") + " \(id)"
     }
 }

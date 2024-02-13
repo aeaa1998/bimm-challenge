@@ -10,7 +10,16 @@ import ViewInspector
 import SwiftUI
 @testable import BIMM
 
-final class CatCardViewTest: XCTestCase {
+final class CatCardViewIntegrationTest: XCTestCase {
+
+    func test_id_CatCardView() throws {
+        //Arrange
+        let cat = Cat(id: "test", tags: [], owner: "owner")
+        let view = CatCardView(cat: cat)
+        
+        //Assert
+        _ = try XCTUnwrap(try? view.inspect().find(text: cat.id))
+    }
 
 
     func test_owner_CatCardView() throws {
@@ -54,7 +63,7 @@ final class CatCardViewTest: XCTestCase {
     func test_tagLimit_CatCardView() throws {
         //Arrange
         var tags = [String]()
-        for i in (1...10) {
+        for i in (1...100) {
             tags.append("tag \(i)")
         }
         let cat = Cat(id: "test", tags: tags, owner: "owner")
@@ -62,22 +71,23 @@ final class CatCardViewTest: XCTestCase {
         
         //Assert
         let tagViews = try view.inspect().findAll(ChipView<Text>.self)
-        XCTAssertEqual(5, tagViews.count)
+        XCTAssertEqual(10, tagViews.count)
     }
 
-    
-    func test_tagLengthFilter_CatCardView() throws {
+
+    func test_tagSelectedFilter_CatCardView() throws {
         //Arrange
         var tags = [String]()
-        for i in (1...10) {
-            tags.append("tag very very long \(i)")
+        for i in (1...100) {
+            tags.append("tag \(i)")
         }
+        
         let cat = Cat(id: "test", tags: tags, owner: "owner")
-        let view = CatCardView(cat: cat)
+        let view = CatCardView(cat: cat, filterTags: [cat.tags.last!])
         
         //Assert
         let tagViews = try view.inspect().findAll(ChipView<Text>.self)
-        XCTAssertTrue(tagViews.isEmpty)
+        XCTAssertEqual(try tagViews.first!.text().string(), cat.tags.last!)
     }
 
 }

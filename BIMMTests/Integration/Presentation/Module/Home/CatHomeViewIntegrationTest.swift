@@ -25,7 +25,7 @@ final class CatHomeViewIntegrationTest: XCTestCase {
 
     func test_emptyState_CatHomeView_Content() throws {
         //Arrange
-        let view = CatHomeView.Content(requestState: .success, cats: [], onCatSelected: { _ in }, onRetry: {})
+        let view = CatHomeView.Content(requestState: .success, tagsRequestState: .success, cats: [], filterTags: [], filtersVisible: .constant(false), onCatSelected: { _ in }, onRetry: {})
         
         //Assert
         let emptyText = try? XCTUnwrap(try? view.inspect().find(ViewType.Text.self){ text in
@@ -40,7 +40,7 @@ final class CatHomeViewIntegrationTest: XCTestCase {
     
     func test_errorState_CatHomeView_Content() throws {
         //Arrange
-        let view = CatHomeView.Content(requestState: .error("error"), cats: [], onCatSelected: { _ in }, onRetry: {})
+        let view = CatHomeView.Content(requestState: .error("error"), tagsRequestState: .success, cats: [], filterTags: [], filtersVisible: .constant(false), onCatSelected: { _ in }, onRetry: {})
         
         //Assert
         _ = try? XCTUnwrap(try? view.inspect().find(SadCatErrorView.self))
@@ -51,7 +51,7 @@ final class CatHomeViewIntegrationTest: XCTestCase {
     func test_successState_CatHomeView_Content() throws {
         //Arrange
         let cats = FakeCatService.catsList
-        let view = CatHomeView.Content(requestState: .success, cats: cats, onCatSelected: { _ in }, onRetry: {})
+        let view = CatHomeView.Content(requestState: .success, tagsRequestState: .success, cats: cats, filterTags: [], filtersVisible: .constant(false), onCatSelected: { _ in }, onRetry: {})
         
         //Assert
         
@@ -66,11 +66,24 @@ final class CatHomeViewIntegrationTest: XCTestCase {
                      
     }
     
+    
+    func test_successFilters_CatHomeView_Content() throws {
+        //Arrange
+        let cats = FakeCatService.catsList
+        let view = CatHomeView.Content(requestState: .success, tagsRequestState: .success, cats: cats, filterTags: ["tag2"], filtersVisible: .constant(false), onCatSelected: { _ in }, onRetry: {})
+        
+        //Assert
+        
+        let cards = try view.inspect().findAll(CatCardView.self)
+        XCTAssertEqual(cards.count, 1)
+                     
+    }
+    
     func test_successScenario_viewModel_CatHomeView() throws {
         //Arrange
         fakeCatService.scenario = .success
         let cats = FakeCatService.catsList
-        let view = CatHomeView(catHomeViewModel: self.catHomeViewModel).environmentObject(Router())
+        let view = CatHomeView(catHomeViewModel: self.catHomeViewModel).environmentObject(Router<CataasNavigation>())
         let expectation = expectation(description: "Request state is success")
         catHomeViewModel.$requestState.sink { state in
             if state == RequestState.success {
@@ -93,7 +106,7 @@ final class CatHomeViewIntegrationTest: XCTestCase {
     func test_emptyScenario_viewModel_CatHomeView() throws {
         //Arrange
         fakeCatService.scenario = .empty
-        let view = CatHomeView(catHomeViewModel: self.catHomeViewModel).environmentObject(Router())
+        let view = CatHomeView(catHomeViewModel: self.catHomeViewModel).environmentObject(Router<CataasNavigation>())
         let expectation = expectation(description: "Request state is success")
         catHomeViewModel.$requestState.sink { state in
             if state == RequestState.success {
@@ -117,7 +130,7 @@ final class CatHomeViewIntegrationTest: XCTestCase {
         //Arrange
         fakeCatService.scenario = .failure
         
-        let view = CatHomeView(catHomeViewModel: self.catHomeViewModel).environmentObject(Router())
+        let view = CatHomeView(catHomeViewModel: self.catHomeViewModel).environmentObject(Router<CataasNavigation>())
         let expectation = expectation(description: "Request state is error")
         catHomeViewModel.$requestState.sink { state in
             if state == RequestState.error() {

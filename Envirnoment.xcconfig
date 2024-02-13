@@ -2,8 +2,9 @@
 //  Envirnoment.xcconfig
 //  BIMM
 //
-//  Created by Augusto Alonso on 6/02/24.
+//  Created by Augusto Alonso on 8/02/24.
 //
 
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
+CATAAS_BASE_URL = cataas.com/

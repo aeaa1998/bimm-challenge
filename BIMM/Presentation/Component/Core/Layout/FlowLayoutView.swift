@@ -80,13 +80,13 @@ struct FlowLayoutView<Item: Equatable & Hashable, Content: View>: View {
 
 #Preview {
     FlowLayoutView(
-    items: ["Test1", "Test2"]
+        items: ["Test1", "Test2"]
     ){
         Text($0)
             .padding(.vertical, 2)
             .padding(.horizontal, 6)
             .background(Color.orange)
-            .clipShape(RoundedRectangle(cornerRadius: 20))
+            .clipShape(BIMMTheme.default.shapes.regular)
             .font(.system(size: 11).bold())
             .foregroundColor(.white)
     }

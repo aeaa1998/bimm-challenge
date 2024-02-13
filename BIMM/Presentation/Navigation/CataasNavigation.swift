@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+enum CataasNavigation: Codable, Hashable {
+    case home
+    case detail(cat: Cat)
+}
